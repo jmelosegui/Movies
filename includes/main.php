@@ -9,12 +9,11 @@ require_once "includes/config.php";
 require_once "includes/connect.php";
 require_once "includes/helpers.php";
 require_once "includes/model/movie.model.php";
-require_once "includes/model/genre.model.php";
+require_once "includes/model/group.model.php";
 require_once "includes/controllers/home.controller.php";
-require_once "includes/controllers/genre.controller.php";
+require_once "includes/controllers/group.controller.php";
 
 // This will allow the browser to cache the pages of the media library.
-
 /*
 header('Cache-Control: max-age=3600, public');
 header('Pragma: cache');

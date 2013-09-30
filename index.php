@@ -9,7 +9,7 @@ require_once "includes/main.php";
 try {
 
   if($_GET['id']){
-    $c = new GenreController();
+    $c = new GroupController();
   }
   else if(empty($_GET) || $_GET['group']){
     $c = new HomeController();

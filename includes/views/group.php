@@ -9,7 +9,7 @@
 <div class="leftColumn">
     <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
         <li data-role="list-divider"><?php echo $_GET['group']?></li>
-        <?php render($genres,array('active'=>$_GET['id'])) ?>
+        <?php render($groups,array('active'=>$_GET['id'])) ?>
     </ul>
 </div>
 

@@ -6,7 +6,7 @@ class HomeController{
 	public function handleRequest(){
 		
 		// Select all the categories:
-		$content = Genre::find(array('group' => $_GET['group']));
+		$content = group::find(array('group' => $_GET['group']));
 		
 		render('home',array(
 			'title'		=> 'Welcome to XBMC Media Library',
