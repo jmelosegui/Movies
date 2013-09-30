@@ -14,7 +14,10 @@ class Movie{
 				break;
 			case 'year':
 				$sql = "SELECT * FROM movie Where c07 = :id order by c07 desc";
-				break;				
+				break;
+            case 'set':
+                $sql = "SELECT m.* FROM movie m Where m.idSet = :id order by m.c07 desc";
+                break;
 			default:
 				throw new Exception("Unsupported group! Movies");				
 		}

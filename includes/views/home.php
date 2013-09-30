@@ -7,6 +7,7 @@
 	    <option value="./?group=genre"<?php echo ($_GET['group'] == 'genre'?'selected':'')?>>Genre</option>
 	    <option value="./?group=director" <?php echo ($_GET['group'] == 'director'?'selected':'')?>>Director</option>
 	    <option value="./?group=year" <?php echo ($_GET['group'] == 'year'?'selected':'')?>>Year</option>
+        <option value="./?group=set"<?php echo ($_GET['group'] == 'set'?'selected':'')?>>Set</option>
 	</select>
 </div>
 

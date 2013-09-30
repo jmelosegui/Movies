@@ -28,6 +28,14 @@ class group{
 					$sql = "SELECT a.idActor as groupId, a.strActor as groupName, count(alm.idDirector) as moviesCount, '$group' as groupCategory FROM actors a left join directorlinkmovie alm on a.idActor = alm.idDirector group by a.idActor, a.strActor having count(alm.idDirector) > 0 order by a.strActor";
 				}
 				break;
+            case 'set':
+                if($arr['id']) {
+                    $sql = "SELECT s.idSet as groupId, s.strSet as groupName, count(m.idMovie) as moviesCount, '$group' as groupCategory  FROM sets s inner join movie m on s.idSet = m.idSet WHERE s.idSet=:id group by s.idSet, s.strSet order by s.strSet";
+                }
+                else {
+                    $sql = "SELECT s.idSet as groupId, s.strSet as groupName, count(m.idMovie) as moviesCount, '$group' as groupCategory  FROM sets s inner join movie m on s.idSet = m.idSet group by s.idSet, s.strSet order by s.strSet";
+                }
+                break;
 			case 'year':
 				if($arr['id']) {
 					$sql = "SELECT c07 as groupId, c07 as groupName, count(c07) as moviesCount, '$group' as groupCategory from movie WHERE c07=:id group by c07 order by c07 desc";
