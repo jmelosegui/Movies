@@ -15,13 +15,13 @@ class Movie
                 $sql = "SELECT m.* FROM directorlinkmovie alm inner join moviepropertiesview m on alm.idMovie = m.idMovie Where idDirector = :id order by m.year desc";
                 break;
             case 'year':
-                $sql = "SELECT * FROM moviepropertiesview Where year = :id order by year desc";
+                $sql = "SELECT * FROM moviepropertiesview Where year = :id order by m.year desc";
                 break;
             case 'set':
                 $sql = "SELECT m.* FROM moviepropertiesview m Where m.idSet = :id order by m.year desc";
                 break;
             case 'all':
-                $sql = "SELECT m.* FROM moviepropertiesview m order by m.year desc";
+                $sql = "SELECT m.* FROM moviepropertiesview m order by m.idMovie desc";
                 break;
             default:
                 throw new Exception("Unsupported group! Movies");
